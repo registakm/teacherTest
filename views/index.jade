@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1= title
+	#teachers
+		- each teacher in teachers
+			div.teacher
+				div.created_at= teacher.created_at
+				div.title= teacher.title
+				div.name= teacher.name
+		a(href='/teacher/new')! = 'Add new teacher'

@@ -1,0 +1,15 @@
+extends layout
+block content
+	h1= title
+	div.newteacher
+		form(method='POST')
+			div
+				div
+					span.label Title:
+					inpu(type='text', name='title', id='editTeacherTitle')
+				div
+					span.label Name:
+					inpu(type='text', name='name', id='editTeacherName')
+				div#editTeacherSubmit
+					input(type='submit', value='Save')
+		a(href='/')!= "Back to Teacher List"
